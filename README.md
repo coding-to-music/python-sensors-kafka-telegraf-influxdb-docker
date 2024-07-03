@@ -1,6 +1,6 @@
 # python-sensors-kafka-telegraf-influxdb-docker
 
-# 🚀 Stream real-time sensor data from Apache Kafka to InfluxDB using Telegraf and Docker 🚀
+# 🚀 Stream synthetic real-time sensor data from Apache Kafka to InfluxDB using Telegraf, docker and Zookeeper. 🚀
 
 https://github.com/coding-to-music/python-sensors-kafka-telegraf-influxdb-docker
 
