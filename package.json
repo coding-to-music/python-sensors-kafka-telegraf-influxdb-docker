@@ -1,0 +1,13 @@
+{
+  "name": "python-sensors-kafka-telegraf-influxdb-docker",
+  "version": "1.0.0",
+  "description": "# 🚀 Stream real-time sensor data from Apache Kafka to InfluxDB using Telegraf and Docker 🚀",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
