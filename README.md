@@ -479,6 +479,17 @@ Before running the sensor application, be sure that the Kafka cluster, InfluxDB,
 python3 ./app/garden_sensor_gateway.py
 ```
 
+Getting errors, Output:
+
+```bash
+Traceback (most recent call last):
+  File "./app/garden_sensor_gateway.py", line 42, in <module>
+    main()
+  File "./app/garden_sensor_gateway.py", line 32, in main
+    producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+```
+
 When you run the application, it sends a randomly generated sensor data to Kafka in five-second intervals. After a few five-second intervals, the output should look like this:
 
 ```json
