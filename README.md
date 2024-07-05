@@ -177,7 +177,9 @@ In your home directory, create a folder called influxgarden_integration and plac
 Then open a terminal window and run the following command to execute Apache Kafka on your machine:
 
 ```bash
-docker-compose -f '_YOUR_HOME_DIRECTORY_/influxgarden_integration/docker-compose.yaml' upCopy
+docker-compose -f '_YOUR_HOME_DIRECTORY_/influxgarden_integration/docker-compose.yaml' up
+
+docker-compose -f ./resources/docker-compose.yaml up
 ```
 
 The output should be as follows:
@@ -210,7 +212,7 @@ docker ps
 
 ```bash
 9f3a20f17ab9 quay.io/strimzi/kafka:0.28.0-kafka-3.1.0 sh -c bin/zookeep... 3 minutes ago Up 3 minutes ago 0.0.0.0:2181->2181/tcp zookeeper
-d3a8b43e84b8 quay.io/strimzi/kafka:0.28.0-kafka-3.1.0 sh -c bin/kafka-s... 3 minutes ago Up 3 minutes ago 0.0.0.0:9092->9092/tcp kafkaCopy
+d3a8b43e84b8 quay.io/strimzi/kafka:0.28.0-kafka-3.1.0 sh -c bin/kafka-s... 3 minutes ago Up 3 minutes ago 0.0.0.0:9092->9092/tcp kafka
 ```
 
 The preceding output shows that the Apache Kafka cluster works without any problem.
@@ -224,7 +226,9 @@ In this tutorial, you will also run InfluxDB in a container via Docker.
 Once you have Docker installed and started on the Docker daemon in your macOS environment, you need to open a new terminal window and run the following command to start InfluxDB:
 
 ```bash
-docker run -d --name influxdb -p 8086:8086 docker.io/influxdb:2.2.0Copy
+docker run -d --name influxdb -p 8086:8086 docker.io/influxdb:2.2.0
+
+docker run -d --name influxdb -p 8086:8086 docker.io/influxdb:latest
 ```
 
 In your web browser, navigate to the localhost:8086 to verify the installation:
