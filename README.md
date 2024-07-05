@@ -442,7 +442,7 @@ export INFLUX*TOKEN=\_YOUR_INFLUXDB_TOKEN_Copy
 In the same terminal window, run the following command to execute Telegraf. Make sure you set `\_YOUR_HOME_DIRECTORY\*` correctly in this command:
 
 ```bash
-telegraf --config _YOUR_HOME_DIRECTORY_/influxgarden_integration/telegraf.confCopy
+telegraf --config _YOUR_HOME_DIRECTORY_/influxgarden_integration/telegraf.conf
 ```
 
 The output should be as follows:
@@ -463,10 +463,20 @@ The InfluxGarden shares a Python application simulating a sensor that produces a
 
 To download the producer application, copy the file content from this GitHub page and save it in the influxgarden_integration directory with the name garden_sensor_gateway.py.
 
+Install the python libraries needed by the producer application
+
+```bash
+pip install kafka-python
+
+or
+
+pip install -r requirements.txt
+```
+
 Before running the sensor application, be sure that the Kafka cluster, InfluxDB, and the Telegraf instances are still running. Then run the following command to execute the application:
 
 ```bash
-python3 garden_sensor_gateway.pyCopy
+python3 ./app/garden_sensor_gateway.py
 ```
 
 When you run the application, it sends a randomly generated sensor data to Kafka in five-second intervals. After a few five-second intervals, the output should look like this:

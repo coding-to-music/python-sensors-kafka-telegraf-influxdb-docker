@@ -2,7 +2,8 @@ import time
 import json
 import random
 
-from kafka import KafkaProducer
+# from kafka import KafkaProducer
+from kafka.producer import KafkaProducer
 
 
 def random_temp_cels():
